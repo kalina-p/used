@@ -1,6 +1,9 @@
 from json2html import *
 import json
+''' 
+please install 
 
+json2html and json '''
 
 ifile = 'api.json'
 converted = 'sample1.html'
