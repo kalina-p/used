@@ -1,0 +1,49 @@
+{
+	"id":"9GFJPMLF",
+	"login":"jankowalski",
+	"firstname":"jan",
+	"lastname":"Kowalski",
+	"email":"jankowalski@interia.pl",
+	"active":true,
+	"created":"2019-02-07 17:08:22",
+	"address":{
+		"address":"wigury 11",
+		"town":"Warszawa",
+		"postalcode":"02-200",
+		"country":"Polska"
+		},
+	"locations":[
+		{
+		"id":"LL7MDJ9D",
+		"name":"Bielany",
+		"created":"2019-02-07 17:08:22",
+		"max":190,
+		"alarm":180,
+		"adc1":189279,
+		"adc2":425384,
+		"cm1":5,
+		"cm2":128,
+		"active":false,
+		"tanktype":1,
+		"mainboard":"SZ04-002",
+		"software":"11.0",
+		"direction":"growth",
+		"address":{
+			"address":"Wigury 11",
+			"town":"Warszawa",
+			"postalcode":"02-200",
+			"country":"Polska"
+			},
+		"measurement":{
+			"percent":79,
+			"cm":142,
+			"temperature":16.8,
+			"volts":5.5,
+			"rssi":74,
+			"nextfull":"2022-02-20 11:46:47",
+			"lastempty":"2022-01-24 11:28:47",
+			"datatime":"2022-02-14 10:01:01"
+			}
+		}
+	]
+}
