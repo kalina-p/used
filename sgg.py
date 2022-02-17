@@ -1,13 +1,14 @@
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 import time
+from datetime import datetime
 
 ilosc = 3
 
 window = webdriver.Chrome("c:\chromedriver.exe")
 window.get("https://sklep.pgg.pl/")
 
-time.sleep(5)
+time.sleep(2)
 
 #dodaj = window.find_element_by_xpath("/html/body/div/section/div/div/div/div[1]/div[3]/div[3]/form/div[4]/div/input[3]")
 dodaj_do_koszyka = window.find_element_by_xpath("/html/body/div/section/div/div/div/div[1]/div[3]/div[3]/form/button")
@@ -15,15 +16,16 @@ czy_aktywny_koszyk = dodaj_do_koszyka.get_property('disabled') # zwykle wartoś�
 #aktywny_koszyk = window.find_element_by_xpath("")
 #final_koszyk = window.find_element_by_xpath("/html/body/div/header/div/div/div[4]/div/nav/ul/li[5]/a")
 
-
+dateTimeObj = datetime.now()
+timestampStr = dateTimeObj.strftime("%H:%M:%S")
 
 while True:
     if czy_aktywny_koszyk == True:
-        print("pierwsza")
+        print("Niedostepny ",timestampStr)
         time.sleep(5)
         window.refresh()
     elif czy_aktywny_koszyk != True:
-        print("druga")
+        print("Dostepny ", timestampStr)
         # for i in range(ilosc - 1): # określ ilośc ile ma wybrać ?
         #     dodaj.click()
       # aktywny_koszyk.click()       # klika na xpath "dodaj do koszyka"
