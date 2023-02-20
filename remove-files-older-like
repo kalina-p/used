@@ -1,0 +1,17 @@
+import os
+import time
+
+# Oblicz liczbę sekund w dniach
+
+m_days = 14
+setup_time = m_days * 24 * 60 * 60
+log_dir = "/var/log"  # Ścieżka do katalogu z logami
+
+# Przejrzyj wszystkie pliki w katalogu 
+for filename in os.listdir(log_dir):
+    filepath = os.path.join(log_dir, filename)
+
+    # Sprawdź, czy plik jest starszy niż x dni
+    if os.path.isfile(filepath) and time.time() - os.path.getmtime(filepath) > setup_time:
+        # Jeśli tak, usuń plik
+        os.remove(filepath)
